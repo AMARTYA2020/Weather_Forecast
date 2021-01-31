@@ -14,6 +14,7 @@ api_data = api_link.json()
 
 if api_data['cod'] == '404':
     print(api_data['message'].capitalize())
+    a = input()
 else:
     weather_desc = api_data['weather'][0]['description']
     temp_city = float(api_data['main']['temp']) - 273.15
@@ -31,3 +32,4 @@ else:
     print('Weather Discription   :  {}'.format(weather_desc))
     print('Wind Speed            :  {} kmph'.format(wind_spd))
     print('Humidity              :  {} %\n'.format(humid))
+    b = input()
